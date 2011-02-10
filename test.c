@@ -35,7 +35,7 @@ typedef struct {
 } test_case;
 
 test_case tests[] = {
-  { "It should initialize with default values", test_init_app_config},
+  { "It should initialize configuration with default values", test_init_app_config},
   { "It should have working threads", test_threads }
 };
 
@@ -45,8 +45,10 @@ int main(int argc, char* argv[]){
   int i = 0;
   for( i = 0 ; i < sizeof(tests)/sizeof(test_case) ; i++){
 
+    printf("\033[22;32m %i:test: %s\n", i, tests[i].desc);
+
     if(tests[i].test_fun() == false){
-      printf("Failure in: %s \n ", tests[i].desc );
+      printf("\033[22;31m Failure in: %s \n", tests[i].desc );
       number_of_failures++;
     }
 

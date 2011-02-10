@@ -15,6 +15,12 @@ bool test_init_app_config(){
   return result;
 }
 
+bool test_threads(){
+  bool result = true;
+  if( test_spawn() != 0 ) result = false;
+  return result;
+}
+
 bool test_fail(){
   return false;
 }
@@ -29,7 +35,8 @@ typedef struct {
 } test_case;
 
 test_case tests[] = {
-  { "It should initialize with default values", test_init_app_config}
+  { "It should initialize with default values", test_init_app_config},
+  { "It should have working threads", test_threads }
 };
 
 int main(int argc, char* argv[]){

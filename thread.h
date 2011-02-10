@@ -5,6 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int spawn_talker();
+int test_spawn();
 
 #endif

@@ -6,8 +6,8 @@ void* print_foo(void* ptr){
   return NULL;
 }
 
-int spawn_talker(){
-  char* text = "Hi guys! im spawned nigga";
+int test_spawn(){
+  char* text = "Hi guys!";
   pthread_t thrd;
   pthread_create( &thrd, NULL, print_foo, (void*) text);
   pthread_join( thrd, NULL);

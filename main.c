@@ -4,6 +4,8 @@
 #include "connection.h"
 #include "thread.h"
 
+#define DEBUG
+
 int main(int argc, char* argv[]){
 
   /* initialize configuration */
@@ -22,6 +24,7 @@ int main(int argc, char* argv[]){
   /* repeat */
   }
 
+  close(server_sockfd);
   return 0;
 
 }

@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "connection.h"
+
 int test_spawn();
 
 int spawn_worker(int sockfd);

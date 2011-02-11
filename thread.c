@@ -13,3 +13,8 @@ int test_spawn(){
   pthread_join( thrd, NULL);
   return 0;
 }
+
+int spawn_worker(int sockfd){
+  /* process request within thread */
+  return 0;
+}

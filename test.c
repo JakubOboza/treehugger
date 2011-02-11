@@ -10,7 +10,7 @@ bool test_init_app_config(){
   bool result = true ;
   const app_config* test_conf = init_appconfig();
   /* check defaults */
-  if ( test_conf->socket  != 3666) result = false;
+  if ( test_conf->port  != 3666) result = false;
   if ( strcmp(test_conf->address,"127.0.0.1") ) result = false;
   return result;
 }

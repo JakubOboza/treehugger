@@ -7,4 +7,6 @@
 
 int test_spawn();
 
+int spawn_worker(int sockfd);
+
 #endif

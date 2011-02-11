@@ -3,10 +3,10 @@
 
 #include <stdlib.h>
 
-#define DEFAULT_SOCK 3666
+#define DEFAULT_PORT 3666
 
 typedef struct {
-  int socket;
+  int port;
   char* address;
 } app_config;
 

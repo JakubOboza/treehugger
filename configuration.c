@@ -2,7 +2,7 @@
 
 app_config* init_appconfig(){
   app_config* config = malloc(sizeof(app_config));
-  config->socket = DEFAULT_SOCK;
+  config->port = DEFAULT_PORT;
   config->address = malloc(sizeof(char) * 10);
   config->address = "127.0.0.1";
   return config;

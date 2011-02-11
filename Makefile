@@ -1,11 +1,11 @@
 MFLAGS = -c
 FLAGS = -Wall --ansi --pedantic
 CC = gcc
-O_FILES = thread.o configuration.o
+O_FILES = thread.o configuration.o connection.o
 
 all: final
 
-final: main.o thread.o configuration.o
+final: $(O_FILES) main.o
 	$(CC) $(FLAGS) $(O_FILES) main.o -o treehugger.run
 
 main.o: main.c
@@ -19,6 +19,9 @@ thread.o: thread.c
 
 configuration.o: configuration.c
 	$(CC) $(FLAGS) $(MFLAGS) configuration.c
+
+connection.o: connection.c
+	$(CC) $(FLAGS) $(MFLAGS) -lsocket connection.c
 
 test: test.o $(O_FILES)
 	$(CC) $(FLAGS) $(O_FILES) test.c -o test.run
